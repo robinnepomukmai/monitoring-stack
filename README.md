@@ -46,7 +46,6 @@ Docker Registry foo
 list all images
 ---
 ````bash
-
 http://localhost:5000/v2/_catalog
 ````
 
