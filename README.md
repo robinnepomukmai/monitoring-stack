@@ -2,9 +2,8 @@
 
 Necessary tools:
 ===
-- Docker3
-- Python
-- docker-py (pip3 install docker)
+- Docker
+- Docker-compose
 
 Stack overview
 ===
@@ -23,29 +22,12 @@ Alerting based on Prometheus data
 
 How-to start
 ===
-1. start the local docker registry by execute:
+1. build the images:
 ``` bash
-python3 start_docker_registry.py
+docker-compose build
 ```
 
-2. build and push the docker images
+2. start all necessary images
 ``` bash
-python3 build_images.py
-
+docker-compose up
 ```
-
-3. start all necessary images
-``` bash
-python3 start_monitoring_stack.py
-```
-
-
-Docker Registry foo
-===
-
-list all images
----
-````bash
-http://localhost:5000/v2/_catalog
-````
-
